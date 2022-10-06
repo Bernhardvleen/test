@@ -4,6 +4,6 @@
   tasks:
     - name: search
       ansible.windows.win_updates:
-        category_names: SecurityUpdates
+        category_names: *
         state: searched
         log_path: C:\ansible_wu.txt

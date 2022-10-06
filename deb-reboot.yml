@@ -1,8 +1,12 @@
-      - name: Check if a reboot is needed on Ubuntu/Debian
+---
+- name: check for reboot and maybe do it 
+  hosts: all 
+  tasks:
+     - name: Check if a reboot is needed on Ubuntu/Debian
         register: reboot_required_file
         stat: path=/var/run/reboot-required get_md5=no
  
-      - name: Reboot  
+     - name: Reboot  
         reboot:
           msg: "Reboot initiated by Ansible for kernel updates"
           connect_timeout: 5

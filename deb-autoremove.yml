@@ -1,0 +1,7 @@
+---
+- name: just autoremove 
+  hosts: all
+  tasks:
+    - name: apt 
+      ansible.builtin.apt:
+        autoremove: yes

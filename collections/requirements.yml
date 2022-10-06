@@ -1,1 +1,1 @@
-ansible.windows
+ansible-galaxy collection install ansible.windows

@@ -4,6 +4,14 @@
   tasks:
     - name: search
       ansible.windows.win_updates:
-        category_names: '_'
+        category_names: 
+          - CriticalUpdates
+          - DefinitionUpdates
+          - DeveloperKits
+          - FeaturePacks
+          - SecurityUpdates
+          - ServicePacks
+          - UpdateRollups
         state: searched
+        reboot: false
         log_path: C:\ansible_wu.txt

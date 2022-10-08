@@ -1,6 +1,6 @@
 ---
 - name: Updates
-  hosts: ryzen
+  hosts: all
   tasks:
     - name: search
       ansible.windows.win_updates:
